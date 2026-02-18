@@ -1,23 +1,90 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { defineConfig, globalIgnores } from 'eslint/config'
+// eslint.config.js
+import js from "@eslint/js";
+import ts from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import prettier from "eslint-plugin-prettier";
+import globals from "globals";
 
-export default defineConfig([
-  globalIgnores(['dist']),
+export default [
+  // Base JS rules
   {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      js.configs.recommended,
-      tseslint.configs.recommended,
-      reactHooks.configs.flat.recommended,
-      reactRefresh.configs.vite,
-    ],
+    ...js.configs.recommended,
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+      ecmaVersion: 2022,
+      sourceType: "module",
+      globals: {
+        ...globals.browser, // ✅ fixes 'document', 'window', etc.
+        ...globals.es2021,
+      },
     },
   },
-])
+
+  // TypeScript support
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        project: "./tsconfig.json",
+        sourceType: "module",
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+    plugins: {
+      "@typescript-eslint": ts,
+    },
+    rules: {
+      ...ts.configs.recommended.rules,
+      ...ts.configs["recommended-type-checked"].rules,
+      "@typescript-eslint/no-floating-promises": "error",
+      "@typescript-eslint/explicit-function-return-type": "warn",
+      "@typescript-eslint/no-misused-promises": "off",
+    },
+  },
+
+  // React + JSX
+  {
+    files: ["**/*.jsx", "**/*.tsx"],
+    plugins: {
+      react,
+      "react-hooks": reactHooks,
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+    rules: {
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-uses-react": "off",
+    },
+  },
+
+  // Prettier formatting rules
+  {
+    name: "prettier",
+    plugins: {
+      prettier,
+    },
+    rules: {
+      // "linebreak-style": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          endOfLine: "auto",
+          semi: true,
+          singleQuote: false,
+          trailingComma: "es5",
+          printWidth: 100,
+        },
+      ],
+    },
+  },
+];

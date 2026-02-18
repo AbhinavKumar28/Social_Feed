@@ -40,3 +40,40 @@
 .read-the-docs {
   color: #888;
 }
+.pady{
+  padding: 12px;
+  /* width: 400px; */
+}
+.trending-image{
+  width: 30px;
+  height: 30px;
+  padding-right: 8px;
+}
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
+.center-align{
+  display: flex;
+  align-items: center;
+}
+.search-icon{
+  width: 20px;
+  height: 20px;
+  padding-right: 8px;
+}
+.border{
+  border: 1px solid gray;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #f5f2f2d7;
+}
+.border-bottom{
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  cursor: default;
+  display: flex;
+  vertical-align: baseline;
+  justify-content: space-between;
+}
