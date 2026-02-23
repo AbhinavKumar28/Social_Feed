@@ -1,11 +1,13 @@
 // import { useState } from "react";
+import type { JSX } from "react";
 import "../App.css";
 
-function Account() {
-//   const [count, setCount] = useState(0);
+function Account(): JSX.Element {
+  //   const [count, setCount] = useState(0);
 
   return (
     <>
+
     </>
   );
 }

@@ -2,19 +2,31 @@
 import "../App.css";
 import Menu from "./Menu";
 import Content from "./Content";
-import Search from "./Search";
 import Trending from "./Trending";
-function LeftBar() {
+import type { JSX } from "react";
+import TrendingCard from "./TrendingCard";
+function Left(): JSX.Element {
   //   const [count, setCount] = useState(0);
 
   return (
     <>
       <Trending />
-      <Search />
+      <div className="pady">
+        <div className="border">
+          <a
+            className="search-icon"
+            href="https://www.flaticon.com/free-icons/seo"
+            title="seo icons"
+          >
+            <img src="../assets/search.png" width="20" />
+          </a>
+          <span>Search or paste URL</span>
+        </div>
+      </div>
       <Menu />
-      <Content />
+      <TrendingCard />
     </>
   );
 }
 
-export default LeftBar;
+export default Left;

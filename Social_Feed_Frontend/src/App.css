@@ -2,7 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .logo {
@@ -17,7 +17,27 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
+.right-bar-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hashtag-content{
+  color: purple;
+}
+.full-content-image{
+  height: 400px;
+  width: 600px;
+}
+.time{
+  margin-left: auto;
+}
+.icon path{
+  fill: black;
+}
+.icon-plus path{
+  fill: white;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -57,17 +77,30 @@
 .center-align{
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 .search-icon{
   width: 20px;
   height: 20px;
   padding-right: 8px;
 }
+.new-post{
+  background-color: purple;
+  color: white;
+  padding: 6px;
+  margin: 12px;
+}
 .border{
   border: 1px solid gray;
   padding: 8px;
   border-radius: 5px;
   background-color: #f5f2f2d7;
+}
+.gray-text{
+  color: gray;
+}
+.margin-left{
+  margin-left: 9px;
 }
 .border-bottom{
   border: 0;
@@ -76,4 +109,9 @@
   display: flex;
   vertical-align: baseline;
   justify-content: space-between;
+}
+.top-container{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 0px;
 }

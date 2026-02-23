@@ -1,8 +1,9 @@
 // import { useState } from "react";
+import type { JSX } from "react";
 import "../App.css";
 
-function Menu() {
-//   const [count, setCount] = useState(0);
+function Menu(): JSX.Element {
+  //   const [count, setCount] = useState(0);
 
   return (
     <>
