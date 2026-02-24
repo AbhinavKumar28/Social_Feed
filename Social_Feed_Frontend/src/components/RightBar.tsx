@@ -6,23 +6,25 @@ function Right(): JSX.Element {
   return (
     <>
       <div className="right-bar-container">
-        <div className="pady">
-          <div className="border">
-            <a
-              className="search-icon"
-              href="https://www.flaticon.com/free-icons/seo"
-              title="seo icons"
-            >
-              <img src="../assets/search.png" width="20" />
-            </a>
-            <span>Search or paste URL</span>
+        <div className="sticky">
+          <div className="pady">
+            <div className="border">
+              <a
+                className="search-icon"
+                href="https://www.flaticon.com/free-icons/seo"
+                title="seo icons"
+              >
+                <img src="../assets/search.png" width="20" />
+              </a>
+              <span>Search or paste URL</span>
+            </div>
           </div>
-        </div>
-        <div className="pady center-align">
-          <img src="../assets/image.png" className="trending-image" alt="" />
-          <div>
-            <div>ak_57</div>
-            <div className="gray-text">@ak_57</div>
+          <div className="pady center-align">
+            <img src="../assets/image.png" className="trending-image" alt="" />
+            <div>
+              <div>ak_57</div>
+              <div className="gray-text">@ak_57</div>
+            </div>
           </div>
         </div>
         <div className="new-post">

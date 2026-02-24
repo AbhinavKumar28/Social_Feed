@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import "../App.css";
 import Menu from "./Menu";
-import Content from "./Content";
+// import Content from "./Content";
 import Trending from "./Trending";
 import type { JSX } from "react";
 import TrendingCard from "./TrendingCard";
@@ -11,7 +11,7 @@ function Left(): JSX.Element {
   return (
     <>
       <Trending />
-      <div className="pady">
+      <div className="pady-search">
         <div className="border">
           <a
             className="search-icon"
