@@ -13,7 +13,7 @@ function App(): JSX.Element {
         <div>
           <LeftBar />
         </div>
-        <div>
+        <div className="right-width">
           <RightBar />
         </div>
       </div>

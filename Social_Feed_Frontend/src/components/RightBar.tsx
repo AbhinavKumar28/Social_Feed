@@ -7,7 +7,7 @@ function Right(): JSX.Element {
     <>
       <div className="right-bar-container">
         <div className="sticky">
-          <div className="pady">
+          <div className="pady-searching">
             <div className="border">
               <a
                 className="search-icon"
@@ -19,7 +19,7 @@ function Right(): JSX.Element {
               <span>Search or paste URL</span>
             </div>
           </div>
-          <div className="pady center-align">
+          <div className="pady-name center-align">
             <img src="../assets/image.png" className="trending-image" alt="" />
             <div>
               <div>ak_57</div>
@@ -70,7 +70,7 @@ function Right(): JSX.Element {
           </svg>
           <span>Trending</span>
         </a>
-        <a className="column-link column-link--transparent" href="/notifications">
+        <a className="column-link navigate column-link--transparent" href="/notifications">
           <i className="icon-with-badge">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +88,7 @@ function Right(): JSX.Element {
       </div>
       <hr className="divider" />
       <div className="right-bar-container">
-        <a className="column-link column-link--transparent" id=":r1:-title" href="/lists">
+        <a className="column-link lists column-link--transparent" id=":r1:-title" href="/lists">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
@@ -146,7 +146,7 @@ function Right(): JSX.Element {
           <span>Bookmarks</span>
         </a>
         <a
-          className="column-link column-link--transparent active"
+          className="column-link navigate column-link--transparent active"
           href="/conversations"
           aria-current="page"
         >
@@ -165,7 +165,7 @@ function Right(): JSX.Element {
       </div>
       <hr className="divider" />
       <div className="right-bar-container">
-        <a href="/settings/preferences" className="column-link column-link--transparent">
+        <a href="/settings/preferences" className="lists column-link column-link--transparent">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
@@ -178,7 +178,7 @@ function Right(): JSX.Element {
           </svg>
           <span>Preferences</span>
         </a>
-        <button
+        <a
           className="column-link column-link--transparent"
           type="button"
           aria-expanded="false"
@@ -195,7 +195,7 @@ function Right(): JSX.Element {
             <path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"></path>
           </svg>
           <span>More</span>
-        </button>
+        </a>
         <a
           className="column-link column-link--transparent active"
           href="/about"

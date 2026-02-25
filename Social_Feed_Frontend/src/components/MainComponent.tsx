@@ -13,7 +13,7 @@ function MainComponent(): JSX.Element {
         <div>
           <Left />
         </div>
-        <div>
+        <div className="right-width">
           <Right />
         </div>
       </div>

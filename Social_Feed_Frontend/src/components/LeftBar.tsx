@@ -3,10 +3,11 @@ import "../App.css";
 import Menu from "./Menu";
 // import Content from "./Content";
 import Trending from "./Trending";
-import type { JSX } from "react";
+import { useState, type JSX } from "react";
 import TrendingCard from "./TrendingCard";
 function Left(): JSX.Element {
   //   const [count, setCount] = useState(0);
+  const [clicked, setClicked] = useState<"posts" | "hashtags" | "people" | "news">("posts");
 
   return (
     <>
@@ -23,8 +24,8 @@ function Left(): JSX.Element {
           <span>Search or paste URL</span>
         </div>
       </div>
-      <Menu />
-      <TrendingCard />
+      <Menu clicked={clicked} setClicked={setClicked} />
+      <TrendingCard clicked={clicked} />
     </>
   );
 }
