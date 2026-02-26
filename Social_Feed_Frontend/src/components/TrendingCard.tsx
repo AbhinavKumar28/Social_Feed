@@ -193,12 +193,56 @@ function TrendingCard({ clicked }: Clicked): JSX.Element {
       )}
       {clicked === "people" && (
         <>
-          <div>Popular on mastodon.social</div>
-          <div>
-            <div><img src="../assets/image.png" alt="" /></div>
-            <div><div>Information Is Beautiful</div>
-            <div>@infobeautiful@vis.social</div></div>
-            
+          <div className="grid-view">
+            <div className="column-one">Popular on mastodon.social</div>
+
+            <div className="column-two">
+              <img src="../assets/image.png" className="people-image" alt="" />
+            </div>
+            <div className="column-one">
+              <div>Information Is Beautiful</div>
+              <div>@infobeautiful@vis.social</div>
+            </div>
+            <div className="column-three">
+              <button
+                type="button"
+                aria-label="Don't show again"
+                aria-hidden="false"
+                title="Don't show again"
+                className="explore-suggestions-card__dismiss-button icon-button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                  className="icon icon-close"
+                  aria-hidden="true"
+                >
+                  <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+                </svg>{" "}
+              </button>
+            </div>
+            <button className="column-four">Follow</button>
+          </div>
+        </>
+      )}
+      {clicked === "news" && (
+        <>
+          <div className="news-card">
+            <div>
+              <div>USA TODAY · 2d</div>
+              <div>
+                Deepak Chopra acknowledges &apos;poor judgment&apos; over emails with Epstein
+              </div>
+              <div className="posts-news">
+                <div>By , USA TODAY</div>
+                <div className="margin-left">160 posts</div>
+              </div>
+            </div>
+            <div>
+              <img className="news-image" src="../assets/image.png" alt="" />
+            </div>
           </div>
         </>
       )}

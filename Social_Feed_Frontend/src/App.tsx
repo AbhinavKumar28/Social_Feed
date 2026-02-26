@@ -1,22 +1,14 @@
 // import { useState } from "react";
 import "./App.css";
 import type { JSX } from "react";
-import LeftBar from "./components/LeftBar";
-import RightBar from "./components/RightBar";
+import MainComponent from "./components/MainComponent";
 
 function App(): JSX.Element {
   // const [count, setCount] = useState(0);
 
   return (
     <>
-      <div className="top-container">
-        <div>
-          <LeftBar />
-        </div>
-        <div className="right-width">
-          <RightBar />
-        </div>
-      </div>
+      <MainComponent />
     </>
   );
 }
