@@ -1,7 +1,8 @@
 // import { useState } from "react";
 import type { JSX } from "react";
 import "../App.css";
-import "../assets/image.png";
+import mastodonLogo from "../assets/mastodon.png";
+import aiLogo from "../assets/ai.png";
 import type { Clicked } from "../types/components";
 function TrendingCard({ clicked }: Clicked): JSX.Element {
   //   const [count, setCount] = useState(0);
@@ -11,7 +12,7 @@ function TrendingCard({ clicked }: Clicked): JSX.Element {
       {clicked === "posts" && (
         <div className="pady-trending-card">
           <div className=" center-align">
-            <img src="../assets/image.png" className="trending-image" alt="" />
+            <img src={mastodonLogo} className="trending-image" alt="" />
             <div>
               <div>Mr.Mark &quot;The Sharpie King&quot;</div>
               <div className="gray-text">@markmetz@sfba.social</div>
@@ -43,7 +44,7 @@ function TrendingCard({ clicked }: Clicked): JSX.Element {
             <span className="hashtag-content">#solarpunk</span>
           </div>
           <div>
-            <img src="../assets/image_copy.png" alt="" className="full-content-image" />
+            <img src={aiLogo} alt="" className="full-content-image" />
           </div>
           <div>
             <button className="hashtag-buttons">#Solarpunk</button>

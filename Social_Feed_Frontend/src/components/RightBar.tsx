@@ -1,6 +1,8 @@
 // import { useState } from "react";
 import type { JSX } from "react";
 import "../App.css";
+import searchLogo from "../assets/search.png";
+import mastodonLogo from "../assets/mastodon.png";
 import type { Rightmenu } from "../types/components";
 function Right({ left, setLeft }: Rightmenu): JSX.Element {
   //   const [count, setCount] = useState(0);
@@ -16,13 +18,13 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
                 href="https://www.flaticon.com/free-icons/seo"
                 title="seo icons"
               >
-                <img src="../assets/search.png" width="20" />
+                <img src={searchLogo} width="20" />
               </a>
               <span>Search or paste URL</span>
             </div>
           </div>
           <div className="pady-name center-align">
-            <img src="../assets/image.png" className="trending-image" alt="" />
+            <img src={mastodonLogo} className="trending-image" alt="" />
             <div>
               <div>ak_57</div>
               <div className="gray-text">@ak_57</div>
