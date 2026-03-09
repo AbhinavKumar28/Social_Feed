@@ -7,7 +7,17 @@ export type MenuProps = {
 export type Clicked = {
   clicked: clicked;
 };
-export type left = "new_posts" | "trending";
+export type left =
+  | "favourites"
+  | "bookmarks"
+  | "private"
+  | "new_posts"
+  | "hashtags"
+  | "trending"
+  | "profile"
+  | "home"
+  | "lists"
+  | "notification";
 export type Leftmenu = {
   left: left;
 };

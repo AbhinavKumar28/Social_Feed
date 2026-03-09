@@ -1,9 +1,9 @@
 // import { useState } from "react";
 import type { JSX } from "react";
 import "../App.css";
-import searchLogo from "../assets/search.png";
 import mastodonLogo from "../assets/mastodon.png";
 import type { Rightmenu } from "../types/components";
+import Search from "./Search";
 function Right({ left, setLeft }: Rightmenu): JSX.Element {
   //   const [count, setCount] = useState(0);
   console.log(left);
@@ -11,19 +11,8 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
     <>
       <div className="right-bar-container-top">
         <div className="sticky">
-          <div className="pady-searching">
-            <div className="border">
-              <a
-                className="search-icon"
-                href="https://www.flaticon.com/free-icons/seo"
-                title="seo icons"
-              >
-                <img src={searchLogo} width="20" />
-              </a>
-              <span>Search or paste URL</span>
-            </div>
-          </div>
-          <div className="pady-name center-align">
+          <Search />
+          <div className="pady-name center-align" onClick={() => setLeft("profile")}>
             <img src={mastodonLogo} className="trending-image" alt="" />
             <div>
               <div>ak_57</div>
@@ -44,7 +33,11 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
           </svg>
           <span className="margin-left">New Post</span>
         </div>
-        <a className="column-link column-link--transparent" href="/home">
+        <a
+          onClick={() => setLeft("home")}
+          className="column-link column-link--transparent"
+          // href="/home"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
@@ -59,7 +52,8 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
         </a>
         <a
           className="column-link column-link--transparent active"
-          href="/explore"
+          // href="/explore"
+          onClick={() => setLeft("trending")}
           aria-current="page"
         >
           <svg
@@ -74,7 +68,10 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
           </svg>
           <span>Trending</span>
         </a>
-        <a className="column-link navigate column-link--transparent" href="/notifications">
+        <a
+          className="column-link navigate column-link--transparent"
+          onClick={() => setLeft("notification")}
+        >
           <i className="icon-with-badge">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +88,11 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
         </a>
         <hr className="divider" />
         <div className="right-bar-container">
-          <a className="column-link lists column-link--transparent" id=":r1:-title" href="/lists">
+          <a
+            onClick={() => setLeft("lists")}
+            className="column-link lists column-link--transparent"
+            id=":r1:-title"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24"
@@ -104,7 +105,11 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
             </svg>
             <span>Lists</span>
           </a>
-          <a className="column-link column-link--transparent" id=":r2:-title" href="/followed_tags">
+          <a
+            onClick={() => setLeft("hashtags")}
+            className="column-link column-link--transparent"
+            id=":r2:-title"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24"
@@ -119,7 +124,7 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
           </a>
           <a
             className="column-link column-link--transparent active"
-            href="/favourites"
+            onClick={() => setLeft("favourites")}
             aria-current="page"
           >
             <svg
@@ -134,7 +139,7 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
             </svg>
             <span>Favourites</span>
           </a>
-          <a className="column-link column-link--transparent" href="/bookmarks">
+          <a className="column-link column-link--transparent" onClick={() => setLeft("bookmarks")}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24"
@@ -149,7 +154,7 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
           </a>
           <a
             className="column-link navigate column-link--transparent active"
-            href="/conversations"
+            onClick={() => setLeft("private")}
             aria-current="page"
           >
             <svg
@@ -197,6 +202,19 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
               <path d="M240-400q-33 0-56.5-23.5T160-480q0-33 23.5-56.5T240-560q33 0 56.5 23.5T320-480q0 33-23.5 56.5T240-400Zm240 0q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm240 0q-33 0-56.5-23.5T640-480q0-33 23.5-56.5T720-560q33 0 56.5 23.5T800-480q0 33-23.5 56.5T720-400Z"></path>
             </svg>
             <span>More</span>
+            <div className="more">
+              <div className="more-elements">Muted words</div>
+              <div className="more-elements">Muted users</div>
+              <div className="more-elements">Blocked users</div>
+              <div className="more-elements">Blocked domains</div>
+              <hr className="divider" />
+              <div className="more-elements">Privacy and reach</div>
+              <div className="more-elements">Automated post deletion</div>
+              <div className="more-elements">Password and security</div>
+              <div className="more-elements">Import and export</div>
+              <hr className="divider" />
+              <div className="more-elements">Logout</div>
+            </div>
           </a>
           <a
             className="column-link column-link--transparent active"

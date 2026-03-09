@@ -6,7 +6,18 @@ import Right from "./RightBar";
 
 function MainComponent(): JSX.Element {
   //   const [count, setCount] = useState(0);
-  const [left, setLeft] = useState<"new_posts" | "trending">("trending");
+  const [left, setLeft] = useState<
+    | "favourites"
+    | "bookmarks"
+    | "private"
+    | "new_posts"
+    | "trending"
+    | "hashtags"
+    | "profile"
+    | "home"
+    | "notification"
+    | "lists"
+  >("trending");
 
   return (
     <>
