@@ -11,11 +11,7 @@ function Search(): JSX.Element {
     <>
       <div className="pady-search">
         <div className="border">
-          <a
-            className="search-icon"
-            href="https://www.flaticon.com/free-icons/seo"
-            title="seo icons"
-          >
+          <a className="search-icon">
             <img src={searchLogo} width="20" />
           </a>
           <input

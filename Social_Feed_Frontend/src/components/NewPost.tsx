@@ -5,11 +5,7 @@ import "../App.css";
 function NewPost(): JSX.Element {
   //   const [count, setCount] = useState(0);
 
-  return (
-    <>
-
-    </>
-  );
+  return <></>;
 }
 
 export default NewPost;

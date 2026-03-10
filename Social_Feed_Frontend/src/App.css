@@ -284,6 +284,7 @@ font-weight:800;
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 100;
 }
 .hashtag-buttons{
   background-color: rgb(242, 242, 252);
@@ -459,6 +460,12 @@ font-weight:800;
   display: grid;
   grid-template-columns: 3.6fr 1fr;
   gap: 0px;
+}
+.red{
+  color: red;
+}
+.black{
+  color: black;
 }
 .column-link{
   position: relative;

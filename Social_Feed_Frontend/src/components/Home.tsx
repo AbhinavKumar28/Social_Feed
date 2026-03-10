@@ -8,7 +8,7 @@ function Home(): JSX.Element {
   return (
     <>
       <div className="pady center-align">
-        <img src={mastodonLogo} className="trending-image" alt="" />
+        <img src={mastodonLogo} className="trending-image" />
         <span>Home</span>
       </div>
       <hr className="divider" />
