@@ -25,3 +25,11 @@ export type Rightmenu = {
   left: left;
   setLeft: React.Dispatch<React.SetStateAction<left>>;
 };
+export type Post = {
+  author: { name: string; handle: string; avatar: string };
+  content: string;
+  images: string[];
+  hashtags: string[];
+  stats: { replies: number; boosts: number; favourites: number };
+  timestamp: string;
+};

@@ -1,0 +1,58 @@
+[
+  {
+    "author": { "name": "Information Is Beautiful", "handle": "@infobeautiful@vis.social", "avatar": "" },
+    "content": "Six ways to divide England linguistically — fascinating visualization by @starkeycomics showing regional language patterns across the country.",
+    "images": [],
+    "hashtags": ["DataVisualization", "Linguistics", "England"],
+    "stats": { "replies": 3, "boosts": 63, "favourites": 42 },
+    "timestamp": "3h"
+  },
+  {
+    "author": { "name": "Open Web Advocate", "handle": "@openweb@mastodon.social", "avatar": "" },
+    "content": "The beauty of the fediverse is that no single company owns your social graph. Platforms like Mastodon prove social media can be decentralized and community-driven.",
+    "images": [],
+    "hashtags": ["Fediverse", "OpenWeb", "Decentralization"],
+    "stats": { "replies": 12, "boosts": 150, "favourites": 210 },
+    "timestamp": "5h"
+  },
+  {
+    "author": { "name": "Code & Coffee", "handle": "@devcoffee@techhub.social", "avatar": "" },
+    "content": "Spent the weekend rewriting a React component and realized the simplest solution was just using derived state instead of useRef. Sometimes the boring solution is the best solution.",
+    "images": [],
+    "hashtags": ["ReactJS", "WebDev", "Programming"],
+    "stats": { "replies": 8, "boosts": 94, "favourites": 120 },
+    "timestamp": "6h"
+  },
+  {
+    "author": { "name": "Climate Signals", "handle": "@climatesignals@earthstream.net", "avatar": "" },
+    "content": "Satellite data from the past decade shows accelerating glacier retreat in multiple mountain regions. The long-term impacts on freshwater availability could be severe.",
+    "images": [],
+    "hashtags": ["ClimateChange", "Glaciers", "Science"],
+    "stats": { "replies": 21, "boosts": 310, "favourites": 415 },
+    "timestamp": "7h"
+  },
+  {
+    "author": { "name": "AI Research Daily", "handle": "@airesearch@aihub.social", "avatar": "" },
+    "content": "Interesting new paper exploring how smaller language models can outperform large ones in domain-specific tasks when properly fine-tuned.",
+    "images": [],
+    "hashtags": ["AI", "MachineLearning", "Research"],
+    "stats": { "replies": 14, "boosts": 188, "favourites": 260 },
+    "timestamp": "2h"
+  },
+  {
+    "author": { "name": "Design Systems", "handle": "@designsystems@ux.social", "avatar": "" },
+    "content": "Good UI design is mostly about consistency. If users can predict what will happen before they click, you've already won half the battle.",
+    "images": [],
+    "hashtags": ["UX", "UIDesign", "ProductDesign"],
+    "stats": { "replies": 6, "boosts": 72, "favourites": 98 },
+    "timestamp": "8h"
+  },
+  {
+    "author": { "name": "Privacy Matters", "handle": "@privacy@infosec.exchange", "avatar": "" },
+    "content": "Whenever you hear \"ban for kids\" online, read it as \"ID collection by a third-party company that will probably misuse or leak the data.\" Policies often sound good but hide surveillance risks.",
+    "images": [],
+    "hashtags": ["Privacy", "Surveillance", "DigitalRights"],
+    "stats": { "replies": 17, "boosts": 240, "favourites": 301 },
+    "timestamp": "4h"
+  }
+]

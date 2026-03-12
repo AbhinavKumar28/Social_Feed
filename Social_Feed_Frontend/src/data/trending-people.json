@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "popular": "Popular on mastodon.social",
+    "name": "The Public Domain Review",
+    "handle": "@publicdomainrev",
+    "avatar": "",
+    "follow": false
+  },
+  {
+    "id": 2,
+    "popular": "Popular on mastodon.social",
+    "name": "nixCraft 🐧",
+    "handle": "@nixCraft",
+    "avatar": "",
+    "follow": false
+  },
+  {
+    "id": 3,
+    "popular": "Popular among people you follow",
+    "name": "Pete Johnson",
+    "handle": "@pedrojuk@mastodon.green",
+    "avatar": "",
+    "follow": false
+  },
+  {
+    "id": 4,
+    "popular": "Popular on mastodon.social",
+    "name": "kottke.org",
+    "handle": "@kottke",
+    "avatar": "",
+    "follow": false
+  },
+  {
+    "id": 5,
+    "popular": "Popular on mastodon.social",
+    "name": "Tuta",
+    "handle": "@Tutanota",
+    "avatar": "",
+    "follow": false
+  },
+  {
+    "id": 6,
+    "popular": "Popular among people you follow",
+    "name": "Lillymon Ghaznawe ☕️️",
+    "handle": "@kourvo@mastodon.art",
+    "avatar": "",
+    "follow": false
+  },
+  {
+    "id": 7,
+    "popular": "Popular among people you follow",
+    "name": "Stephen Serjeant",
+    "handle": "@stephenserjeant@koyu.space",
+    "avatar": "",
+    "follow": false
+  },
+  {
+    "id": 8,
+    "popular": "Hand-picked by the mastodon.social team",
+    "name": "War and Peas 🧿",
+    "handle": "@warandpeas",
+    "avatar": "",
+    "follow": false
+  },
+  {
+    "id": 9,
+    "popular": "Popular on mastodon.social",
+    "name": "John Siracusa",
+    "handle": "@siracusa",
+    "avatar": "",
+    "follow": false
+  }
+]

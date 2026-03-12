@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "source": "Reuters",
+    "time": "1d",
+    "title": "Exclusive: Foreign hacker in 2023 compromised Epstein files held by FBI, source and documents show",
+    "author": "Raphael Satter",
+    "posts": 269,
+    "image": ""
+  },
+  {
+    "id": 2,
+    "source": "The New York Times",
+    "time": "21h",
+    "title": "U.S. at Fault in Strike on School in Iran, Preliminary Inquiry Says",
+    "author": "Julian E. Barnes",
+    "posts": 224,
+    "image": ""
+  },
+  {
+    "id": 3,
+    "source": "Al Jazeera",
+    "time": "",
+    "title": "Al Jazeera sees bombs being loaded onto US planes at UK base",
+    "author": "",
+    "posts": 87,
+    "image": ""
+  },
+  {
+    "id": 4,
+    "source": "bellingcat",
+    "time": "1h",
+    "title": "AI Used to Promote Non-Existent Evacuation Flights From the Middle East",
+    "author": "",
+    "posts": 76,
+    "image": ""
+  },
+  {
+    "id": 5,
+    "source": "GamingOnLinux",
+    "time": "1h",
+    "title": "Lutris now being built with Claude AI, developer decides to hide it after backlash",
+    "author": "Liam",
+    "posts": 72,
+    "image": ""
+  },
+  {
+    "id": 6,
+    "source": "bellingcat",
+    "time": "22h",
+    "title": "Tracing Tomahawks: US Missiles Bound for Iran Spotted Over Iraq",
+    "author": "",
+    "posts": 124,
+    "image": ""
+  },
+  {
+    "id": 7,
+    "source": "Minnesota Reformer",
+    "time": "1d",
+    "title": "The Minnesota resistance exposed the Orwellian frauds of the administration",
+    "author": "",
+    "posts": 102,
+    "image": ""
+  },
+  {
+    "id": 8,
+    "source": "The Independent",
+    "time": "12h",
+    "title": "Watchdogs call on big tech to urgently do more to protect children online",
+    "author": "Nicole Wootton-Cane",
+    "posts": 61,
+    "image": ""
+  },
+  {
+    "id": 9,
+    "source": "The New York Times",
+    "time": "1d",
+    "title": "How Trump and His Advisers Miscalculated Iran’s Response to War",
+    "author": "Mark Mazzetti",
+    "posts": 112,
+    "image": ""
+  },
+  {
+    "id": 10,
+    "source": "Ars Technica",
+    "time": "1d",
+    "title": "After outages, Amazon to make senior engineers sign off on AI-assisted changes",
+    "author": "Financial Times",
+    "posts": 101,
+    "image": ""
+  },
+  {
+    "id": 11,
+    "source": "Popular Information",
+    "time": "1d",
+    "title": "UPDATE: Trump says Kushner helped convince him to go to war with Iran",
+    "author": "Judd Legum",
+    "posts": 107,
+    "image": ""
+  },
+  {
+    "id": 12,
+    "source": "WIRED",
+    "time": "15h",
+    "title": "Grammarly Is Facing a Class Action Lawsuit Over Its AI 'Expert Review' Feature",
+    "author": "Miles Klee",
+    "posts": 157,
+    "image": ""
+  }
+]

@@ -4,12 +4,8 @@ import "../App.css";
 
 function Account(): JSX.Element {
   //   const [count, setCount] = useState(0);
-
-  return (
-    <>
-
-    </>
-  );
+  // url for images
+  return <></>;
 }
 
 export default Account;
