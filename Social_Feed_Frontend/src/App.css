@@ -54,6 +54,9 @@
 .column-one{
   grid-column: 2;
 }
+.width-70{
+  width: 85%;
+}
 .column-two{
   grid-row: 2;
 }

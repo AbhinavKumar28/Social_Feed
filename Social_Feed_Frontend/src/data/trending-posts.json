@@ -1,14 +1,16 @@
 [
   {
-    "author": { "name": "Information Is Beautiful", "handle": "@infobeautiful@vis.social", "avatar": "" },
+    "id":1,
+    "author": { "name": "Information Is Beautiful", "handle": "@infobeautiful@vis.social", "avatar": "/images/mastodon.png" },
     "content": "Six ways to divide England linguistically — fascinating visualization by @starkeycomics showing regional language patterns across the country.",
-    "images": [],
+    "images": ["/images/england.png"],
     "hashtags": ["DataVisualization", "Linguistics", "England"],
     "stats": { "replies": 3, "boosts": 63, "favourites": 42 },
     "timestamp": "3h"
   },
   {
-    "author": { "name": "Open Web Advocate", "handle": "@openweb@mastodon.social", "avatar": "" },
+    "id":2,
+    "author": { "name": "Open Web Advocate", "handle": "@openweb@mastodon.social", "avatar": "/images/mastodon.png" },
     "content": "The beauty of the fediverse is that no single company owns your social graph. Platforms like Mastodon prove social media can be decentralized and community-driven.",
     "images": [],
     "hashtags": ["Fediverse", "OpenWeb", "Decentralization"],
@@ -16,7 +18,8 @@
     "timestamp": "5h"
   },
   {
-    "author": { "name": "Code & Coffee", "handle": "@devcoffee@techhub.social", "avatar": "" },
+    "id":3,
+    "author": { "name": "Code & Coffee", "handle": "@devcoffee@techhub.social", "avatar": "/images/mastodon.png" },
     "content": "Spent the weekend rewriting a React component and realized the simplest solution was just using derived state instead of useRef. Sometimes the boring solution is the best solution.",
     "images": [],
     "hashtags": ["ReactJS", "WebDev", "Programming"],
@@ -24,7 +27,8 @@
     "timestamp": "6h"
   },
   {
-    "author": { "name": "Climate Signals", "handle": "@climatesignals@earthstream.net", "avatar": "" },
+    "id":4,
+    "author": { "name": "Climate Signals", "handle": "@climatesignals@earthstream.net", "avatar": "/images/mastodon.png" },
     "content": "Satellite data from the past decade shows accelerating glacier retreat in multiple mountain regions. The long-term impacts on freshwater availability could be severe.",
     "images": [],
     "hashtags": ["ClimateChange", "Glaciers", "Science"],
@@ -32,7 +36,8 @@
     "timestamp": "7h"
   },
   {
-    "author": { "name": "AI Research Daily", "handle": "@airesearch@aihub.social", "avatar": "" },
+    "id":5,
+    "author": { "name": "AI Research Daily", "handle": "@airesearch@aihub.social", "avatar": "/images/mastodon.png" },
     "content": "Interesting new paper exploring how smaller language models can outperform large ones in domain-specific tasks when properly fine-tuned.",
     "images": [],
     "hashtags": ["AI", "MachineLearning", "Research"],
@@ -40,7 +45,8 @@
     "timestamp": "2h"
   },
   {
-    "author": { "name": "Design Systems", "handle": "@designsystems@ux.social", "avatar": "" },
+    "id":6,
+    "author": { "name": "Design Systems", "handle": "@designsystems@ux.social", "avatar": "/images/mastodon.png" },
     "content": "Good UI design is mostly about consistency. If users can predict what will happen before they click, you've already won half the battle.",
     "images": [],
     "hashtags": ["UX", "UIDesign", "ProductDesign"],
@@ -48,7 +54,8 @@
     "timestamp": "8h"
   },
   {
-    "author": { "name": "Privacy Matters", "handle": "@privacy@infosec.exchange", "avatar": "" },
+    "id":7,
+    "author": { "name": "Privacy Matters", "handle": "@privacy@infosec.exchange", "avatar": "/images/mastodon.png" },
     "content": "Whenever you hear \"ban for kids\" online, read it as \"ID collection by a third-party company that will probably misuse or leak the data.\" Policies often sound good but hide surveillance risks.",
     "images": [],
     "hashtags": ["Privacy", "Surveillance", "DigitalRights"],
