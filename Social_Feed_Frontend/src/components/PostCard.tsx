@@ -1,13 +1,11 @@
 import type { JSX } from "react";
 import type { Post } from "../types/components";
 import "../App.css";
-import mastodonLogo from "../assets/mastodon.png";
-import aiLogo from "../assets/ai.png";
 function PostCard({ post }: { post: Post }): JSX.Element {
   return (
     <div className="pady-trending-card">
       <div className=" center-align">
-        <img src={mastodonLogo} className="trending-image" alt="" />
+        <img src={post.author.avatar} className="trending-image" alt="" />
         <div>
           <div>{post.author.name}</div>
           <div className="gray-text">{post.author.handle}</div>
@@ -29,7 +27,10 @@ function PostCard({ post }: { post: Post }): JSX.Element {
       </div>
       <div>{post.content}</div>
       <div>
-        <img src={aiLogo} className="full-content-image" />
+        {post.images.length > 0 &&
+          post.images.map((image, index) => (
+            <img key={index} src={image} className="full-content-image" />
+          ))}
       </div>
       <div>
         {post.hashtags.map((hashtag, index) => (
