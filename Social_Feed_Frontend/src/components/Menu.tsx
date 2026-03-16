@@ -2,6 +2,19 @@
 import { type JSX } from "react";
 import "../App.css";
 import type { MenuProps } from "../types/components";
+function Menu ({activeValue, setValue, clicked}:):JSX.Element{
+  return (
+    <div className="border-bottom">
+        
+          {clicked.map((click:string)=><div className="menu-items">
+          <a className={activeValue === click ? "active" : ""} onClick={() => setValue(click)}>
+            {activeValue.charAt(0).toUpperCase() + activeValue.slice(1)}
+          </a>
+        </div>)}
+          
+      </div>
+  )
+}
 function Menu({ clicked, setClicked }: MenuProps): JSX.Element {
   //   const [count, setCount] = useState(0);
   // const [clicked, setClicked] = useState<"posts" | "hashtags" | "people" | "news">("hashtags");

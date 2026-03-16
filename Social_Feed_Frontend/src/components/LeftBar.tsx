@@ -11,6 +11,9 @@ import TrendingCard from "./TrendingCard";
 import type { Leftmenu } from "../types/components";
 import Search from "./Search";
 import Home from "./Home";
+import menuOf from "../data/menu-tabs.json";
+const trend: string[] = menuOf.clicked;
+
 function Left({ left }: Leftmenu): JSX.Element {
   //   const [count, setCount] = useState(0);
   const [clicked, setClicked] = useState<"posts" | "hashtags" | "people" | "news">("posts");
