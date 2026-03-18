@@ -1,11 +1,11 @@
 import React from "react";
-export type clicked = "posts" | "hashtags" | "people" | "news";
 export type MenuProps = {
-  clicked: clicked;
-  setClicked: React.Dispatch<React.SetStateAction<clicked>>;
+  items: string[];
+  active: string;
+  setActive: React.Dispatch<React.SetStateAction<string>>;
 };
 export type Clicked = {
-  clicked: clicked;
+  clicked: string;
 };
 export type left =
   | "favourites"
@@ -56,4 +56,8 @@ export type News = {
   author: string;
   posts: number;
   image: string;
+};
+export type SvgProps = {
+  className: string;
+  path: string;
 };

@@ -5,13 +5,13 @@ function NewsCard({ news }: { news: News }): JSX.Element {
   return (
     <>
       <div className="news-card">
-        <div className="width-70">
+        <div className="news-card-content">
           <div>
             {news.source} · {news.time}
           </div>
           <div>{news.title}</div>
           <div className="posts-news">
-            {news.author !== "" ? <div>By , {news.author}</div> : <div></div>}
+            {news.author && <div>By {news.author}</div>}
             <div className="margin-left">{news.posts} posts</div>
           </div>
         </div>
