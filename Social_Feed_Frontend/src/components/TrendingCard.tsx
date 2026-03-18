@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import type { JSX } from "react";
 import "../App.css";
 import type { Clicked, Hashtag, News, People, Post } from "../types/components";
