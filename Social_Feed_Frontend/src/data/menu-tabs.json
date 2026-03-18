@@ -1,4 +1,5 @@
 {
     "profile":["featured", "posts", "posts and replies", "media"],
-    "clicked":[ "posts", "hashtags", "people", "news"]
+    "clicked":[ "posts", "hashtags", "people", "news"],
+    "notification":["all","mention"]
 }
