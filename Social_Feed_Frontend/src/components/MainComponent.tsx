@@ -5,7 +5,6 @@ import Left from "./LeftBar";
 import Right from "./RightBar";
 
 function MainComponent(): JSX.Element {
-  //   const [count, setCount] = useState(0);
   const [left, setLeft] = useState<
     | "favourites"
     | "bookmarks"

@@ -4,6 +4,7 @@ export type MenuProps = {
   active: string;
   setActive: React.Dispatch<React.SetStateAction<string>>;
 };
+export type MenuKey = "profile" | "clicked" | "notification";
 export type Clicked = {
   clicked: string;
 };

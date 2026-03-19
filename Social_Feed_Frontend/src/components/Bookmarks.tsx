@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { type JSX } from "react";
 import "../App.css";
 import Svg from "./Svg";

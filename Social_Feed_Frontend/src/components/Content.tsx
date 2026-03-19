@@ -1,13 +1,8 @@
-// import { useState } from "react";
+import type { JSX } from "react";
 import "../App.css";
 
-function Content() {
-//   const [count, setCount] = useState(0);
-
-  return (
-    <>
-    </>
-  );
+function Content(): JSX.Element {
+  return <></>;
 }
 
 export default Content;

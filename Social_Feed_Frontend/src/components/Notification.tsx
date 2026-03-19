@@ -1,24 +1,13 @@
-// import { useState } from "react";
-import { useEffect, useRef, useState, type JSX } from "react";
+import { useState, type JSX } from "react";
 import "../App.css";
 import menuOf from "../data/menu-tabs.json";
-const prof: string[] = menuOf.notification as string[];
+const prof: string[] = menuOf.notification;
 
 import Svg from "./Svg";
 import Menu from "./Menu";
 function Notification(): JSX.Element {
   //   const [count, setCount] = useState(0);
-  const inputRef = useRef<HTMLTextAreaElement>(null);
   const [notify, setNotify] = useState<string>("all");
-  useEffect(() => {
-    const el = inputRef.current;
-    if (!el) return;
-
-    el.addEventListener("input", () => {
-      el.style.height = "74px";
-      el.style.height = el.scrollHeight + "px";
-    });
-  });
 
   return (
     <>

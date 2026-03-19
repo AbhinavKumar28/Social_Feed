@@ -1,11 +1,9 @@
-// import { useState } from "react";
 import "../App.css";
 import Menu from "./Menu";
-// import Content from "./Content";
 import Trending from "./Trending";
 import { useEffect, useRef, useState, type JSX } from "react";
 import TrendingCard from "./TrendingCard";
-import type { Leftmenu } from "../types/components";
+import type { Leftmenu, MenuKey } from "../types/components";
 import Search from "./Search";
 import Home from "./Home";
 import menuOf from "../data/menu-tabs.json";
@@ -21,7 +19,7 @@ const trend: string[] = menuOf.clicked;
 
 function Left({ left }: Leftmenu): JSX.Element {
   //   const [count, setCount] = useState(0);
-  const [clicked, setClicked] = useState<string>("posts");
+  const [clicked, setClicked] = useState<MenuKey>("posts");
   const inputRef = useRef<HTMLTextAreaElement>(null);
   useEffect(() => {
     const el = inputRef.current;
