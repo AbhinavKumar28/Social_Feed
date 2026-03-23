@@ -1,26 +1,19 @@
-// import { useState } from "react";
-import { useEffect, useRef, useState, type JSX } from "react";
+import { useState, type JSX } from "react";
 import "../App.css";
+import React from "react";
 import mastodonLogo from "../assets/mastodon.png";
 import Svg from "./Svg";
 function NewPost(): JSX.Element {
-  //   const [count, setCount] = useState(0);
   const maxChars = 500;
   const [text, setText] = useState("");
   const remaining = maxChars - text.length;
   const invalid = remaining < 0;
-  const inputRef = useRef<HTMLTextAreaElement>(null);
-
-  useEffect(() => {
-    const el = inputRef.current;
-    if (!el) return;
-
-    el.addEventListener("input", () => {
-      el.style.height = "74px";
-      el.style.height = el.scrollHeight + "px";
-    });
-  });
-
+  const textinput = (e: React.ChangeEvent<HTMLTextAreaElement>): undefined => {
+    const el = e.currentTarget;
+    setText(el.value);
+    el.style.height = "74px";
+    el.style.height = el.scrollHeight + "px";
+  };
   return (
     <>
       <div>
@@ -59,8 +52,7 @@ function NewPost(): JSX.Element {
         <div>
           <textarea
             value={text}
-            onChange={(e) => setText(e.target.value)}
-            ref={inputRef}
+            onChange={textinput}
             className="newpost-textarea"
             placeholder="What's on your mind?"
           ></textarea>

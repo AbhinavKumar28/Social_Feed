@@ -1,9 +1,7 @@
-// import { useState } from "react";
 import { type JSX } from "react";
 import "../App.css";
 import type { MenuProps } from "../types/components";
 function Menu({ items, active, setActive }: MenuProps): JSX.Element {
-  // active = "featured";
   return (
     <div className="border-bottom">
       {items.map((item: string, index: number) => (

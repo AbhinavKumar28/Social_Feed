@@ -1,18 +1,24 @@
-// import { useState } from "react";
 import { useState, type JSX } from "react";
 import "../App.css";
 import mastodonLogo from "../assets/mastodon.png";
-import type { Rightmenu } from "../types/components";
+import type { left, Rightmenu } from "../types/components";
 import Search from "./Search";
+// import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function Right({ left, setLeft }: Rightmenu): JSX.Element {
   const [more, setMore] = useState(0);
-  console.log(left);
+  const navigate = useNavigate();
+
+  const handleMenuChange = (menu: left): undefined => {
+    void navigate(`/${menu}`);
+    setLeft(menu);
+  };
   return (
     <>
       <div className="right-bar-container-top">
         <div className="sticky">
           <Search />
-          <div className="pady-name center-align" onClick={() => setLeft("profile")}>
+          <div className="pady-name center-align" onClick={() => handleMenuChange("profile")}>
             <img src={mastodonLogo} className="trending-image" alt="" />
             <div>
               <div>ak_57</div>
@@ -20,7 +26,7 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
             </div>
           </div>
         </div>
-        <div className="new-post" onClick={() => setLeft("new_posts")}>
+        <div className="new-post" onClick={() => handleMenuChange("new_posts")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
@@ -33,7 +39,7 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
           <span className="margin-left">New Post</span>
         </div>
         <a
-          onClick={() => setLeft("home")}
+          onClick={() => handleMenuChange("home")}
           className="column-link column-link--transparent"
           // href="/home"
         >
@@ -51,7 +57,7 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
         <a
           className="column-link column-link--transparent active"
           // href="/explore"
-          onClick={() => setLeft("trending")}
+          onClick={() => handleMenuChange("trending")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +72,7 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
         </a>
         <a
           className="column-link navigate column-link--transparent"
-          onClick={() => setLeft("notification")}
+          onClick={() => handleMenuChange("notification")}
         >
           <i className="icon-with-badge">
             <svg
@@ -84,7 +90,7 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
         <hr className="divider" />
         <div className="right-bar-container">
           <a
-            onClick={() => setLeft("lists")}
+            onClick={() => handleMenuChange("lists")}
             className="column-link lists column-link--transparent"
           >
             <svg
@@ -98,7 +104,10 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
             </svg>
             <span>Lists</span>
           </a>
-          <a onClick={() => setLeft("hashtags")} className="column-link column-link--transparent">
+          <a
+            onClick={() => handleMenuChange("hashtags")}
+            className="column-link column-link--transparent"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="24"
@@ -112,7 +121,7 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
           </a>
           <a
             className="column-link column-link--transparent active"
-            onClick={() => setLeft("favourites")}
+            onClick={() => handleMenuChange("favourites")}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +148,7 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
           </a>
           <a
             className="column-link navigate column-link--transparent active"
-            onClick={() => setLeft("private")}
+            onClick={() => handleMenuChange("private")}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -1,7 +1,5 @@
-// import { useState } from "react";
 import "../App.css";
 import Menu from "./Menu";
-// import Content from "./Content";
 import Trending from "./Trending";
 import { useEffect, useRef, useState, type JSX } from "react";
 import TrendingCard from "./TrendingCard";

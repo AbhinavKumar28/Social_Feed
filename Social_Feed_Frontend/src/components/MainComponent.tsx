@@ -1,24 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import type { JSX } from "react";
 import "../App.css";
 import Left from "./LeftBar";
 import Right from "./RightBar";
+import type { Rightmenu } from "../types/components";
 
-function MainComponent(): JSX.Element {
-  //   const [count, setCount] = useState(0);
-  const [left, setLeft] = useState<
-    | "favourites"
-    | "bookmarks"
-    | "private"
-    | "new_posts"
-    | "trending"
-    | "hashtags"
-    | "profile"
-    | "home"
-    | "notification"
-    | "lists"
-  >("trending");
-
+function MainComponent({ left, setLeft }: Rightmenu): JSX.Element {
   return (
     <>
       <div className="top-container">
