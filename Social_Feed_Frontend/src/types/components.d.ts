@@ -61,4 +61,5 @@ export type News = {
 export type SvgProps = {
   className: string;
   path: string;
+  size?: string;
 };

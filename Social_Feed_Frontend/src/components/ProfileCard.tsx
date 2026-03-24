@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useState, type JSX } from "react";
 import "../App.css";
 import Svg from "./Svg";
@@ -12,7 +11,6 @@ const posts: Post[] = postsOf;
 import PostCard from "./PostCard";
 
 function ProfileCard(): JSX.Element {
-  //   const [count, setCount] = useState(0);
   const [profile, setProfile] = useState<string>("featured");
 
   return (
