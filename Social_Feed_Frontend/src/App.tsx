@@ -7,18 +7,7 @@ import Rout from "./routes/routes";
 
 function App(): JSX.Element {
   // const [count, setCount] = useState(0);
-  const [left, setLeft] = useState<
-    | "favourites"
-    | "bookmarks"
-    | "private"
-    | "new_posts"
-    | "trending"
-    | "hashtags"
-    | "profile"
-    | "home"
-    | "notification"
-    | "lists"
-  >("trending");
+  const [left, setLeft] = useState<string>("trending");
 
   return (
     <>

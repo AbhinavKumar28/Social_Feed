@@ -11,7 +11,6 @@ function Right({ left, setLeft }: Rightmenu): JSX.Element {
 
   const handleMenuChange = (menu: left): undefined => {
     void navigate(`/${menu}`);
-    setLeft(menu);
   };
   return (
     <>

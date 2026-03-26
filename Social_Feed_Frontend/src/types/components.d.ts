@@ -4,21 +4,15 @@ export type MenuProps = {
   active: string;
   setActive: React.Dispatch<React.SetStateAction<string>>;
 };
+export type PostState = {
+  setPostState: React.Dispatch<React.SetStateAction<Post[]>>;
+};
 export type MenuKey = "profile" | "clicked" | "notification";
 export type Clicked = {
   clicked: string;
+  poststate: Post[];
 };
-export type left =
-  | "favourites"
-  | "bookmarks"
-  | "private"
-  | "new_posts"
-  | "hashtags"
-  | "trending"
-  | "profile"
-  | "home"
-  | "lists"
-  | "notification";
+export type left = string;
 export type Leftmenu = {
   left: left;
 };

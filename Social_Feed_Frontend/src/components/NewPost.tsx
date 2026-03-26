@@ -1,23 +1,57 @@
-import { useState, type JSX } from "react";
+import { useRef, useState, type JSX } from "react";
 import "../App.css";
 import React from "react";
 import mastodonLogo from "../assets/mastodon.png";
 import Svg from "./Svg";
-function NewPost(): JSX.Element {
+import type { PostState } from "../types/components";
+import { useNavigate } from "react-router-dom";
+function NewPost({ setPostState }: PostState): JSX.Element {
   const maxChars = 500;
   const [text, setText] = useState("");
   const remaining = maxChars - text.length;
   const invalid = remaining < 0;
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   const textinput = (e: React.ChangeEvent<HTMLTextAreaElement>): undefined => {
     const el = e.currentTarget;
     setText(el.value);
     el.style.height = "74px";
     el.style.height = el.scrollHeight + "px";
   };
+  const handlePost = (): undefined => {
+    const value_1 = inputRef.current?.value.trim();
+    if (!value_1) return;
+    const newPost = {
+      id: Date.now(),
+      author: {
+        name: "ak_57",
+        handle: "@ak_57",
+        avatar: "/images/mastodon.png",
+      },
+      content: value_1,
+      images: [],
+      hashtags: [],
+      stats: {
+        replies: 0,
+        boosts: 0,
+        favourites: 0,
+      },
+      timestamp: "now",
+    };
+    setPostState((prev) => [newPost, ...prev]);
+    setText("");
+    return;
+  };
+  const navigate = useNavigate();
+
   return (
     <>
       <div>
-        <button className="column-header__back-button compact" aria-label="Back" type="button">
+        <button
+          onClick={() => navigate(-1)}
+          className="column-header__back-button compact"
+          aria-label="Back"
+          type="button"
+        >
           <Svg
             className="icon"
             path="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
@@ -55,6 +89,7 @@ function NewPost(): JSX.Element {
             onChange={textinput}
             className="newpost-textarea"
             placeholder="What's on your mind?"
+            ref={inputRef}
           ></textarea>
         </div>
         <div className="compose-form__upload-button">
@@ -86,7 +121,7 @@ function NewPost(): JSX.Element {
           </div>
           <div>
             <span className={`post-500 ${remaining < 0 ? "red" : "black"}`}>{remaining}</span>
-            <button disabled={invalid} className="posts-btn">
+            <button disabled={invalid} className="posts-btn" onClick={handlePost}>
               POST
             </button>
           </div>

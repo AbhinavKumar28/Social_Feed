@@ -1,10 +1,14 @@
 import { type JSX } from "react";
 import "../App.css";
 import Svg from "./Svg";
+import { useNavigate } from "react-router-dom";
+
 function Hash(): JSX.Element {
+  const navigate = useNavigate();
+
   return (
     <>
-      <button className="column-header__back-button compact">
+      <button onClick={() => navigate(-1)} className="column-header__back-button compact">
         <Svg
           className="icon"
           path="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"

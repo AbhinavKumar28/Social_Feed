@@ -9,13 +9,14 @@ import postsOf from "../data/trending-posts.json";
 import type { Post } from "../types/components";
 const posts: Post[] = postsOf;
 import PostCard from "./PostCard";
+import { useNavigate } from "react-router-dom";
 
 function ProfileCard(): JSX.Element {
   const [profile, setProfile] = useState<string>("featured");
-
+  const navigate = useNavigate();
   return (
     <>
-      <button className="column-back-button">
+      <button onClick={() => navigate(-1)} className="column-back-button">
         <Svg
           className="icon"
           path="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"

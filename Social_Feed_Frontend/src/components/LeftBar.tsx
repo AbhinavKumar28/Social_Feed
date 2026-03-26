@@ -5,6 +5,9 @@ import { useEffect, useRef, useState, type JSX } from "react";
 import TrendingCard from "./TrendingCard";
 import type { Leftmenu } from "../types/components";
 import Search from "./Search";
+import postsOf from "../data/trending-posts.json";
+import type { Post } from "../types/components";
+const posts: Post[] = postsOf;
 import Home from "./Home";
 import menuOf from "../data/menu-tabs.json";
 import ProfileCard from "./ProfileCard";
@@ -21,6 +24,7 @@ function Left({ left }: Leftmenu): JSX.Element {
   //   const [count, setCount] = useState(0);
   const [clicked, setClicked] = useState<string>("posts");
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const [poststate, setPostState] = useState<Post[]>(posts);
   useEffect(() => {
     const el = inputRef.current;
     if (!el) return;
@@ -38,16 +42,16 @@ function Left({ left }: Leftmenu): JSX.Element {
           <Trending />
           <Search />
           <Menu items={trend} active={clicked} setActive={setClicked} />
-          <TrendingCard clicked={clicked} />
+          <TrendingCard clicked={clicked} poststate={poststate} />
         </>
       )}
       {left === "profile" && <ProfileCard />}
 
-      {left === "new_posts" && <NewPost />}
+      {left === "new_posts" && <NewPost setPostState={setPostState} />}
       {left === "home" && (
         <>
           <Home />
-          <TrendingCard clicked={clicked} />
+          <TrendingCard clicked={clicked} poststate={poststate} />
         </>
       )}
       {left === "notification" && <Notification />}
