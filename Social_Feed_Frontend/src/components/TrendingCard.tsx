@@ -13,7 +13,6 @@ import NewsCard from "./NewsCard";
 const newspaper: News[] = newsOf;
 
 function TrendingCard({ clicked, poststate }: Clicked): JSX.Element {
-  //   const [count, setCount] = useState(0);
   return (
     <>
       {clicked === "posts" && poststate.map((post: Post) => <PostCard key={post.id} post={post} />)}

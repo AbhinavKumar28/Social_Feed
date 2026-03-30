@@ -1,11 +1,8 @@
-// import { useState } from "react";
-// import type { JSX } from "react";
 import "../App.css";
 import { useState, type JSX } from "react";
 
 import searchLogo from "../assets/search.png";
 function Search(): JSX.Element {
-  //   const [count, setCount] = useState(0);
   const [search, setSearch] = useState<boolean>(false);
   return (
     <>

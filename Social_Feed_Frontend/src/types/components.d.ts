@@ -57,3 +57,8 @@ export type SvgProps = {
   path: string;
   size?: string;
 };
+export type NavProps = {
+  className?: string;
+  path: string;
+  item: string;
+};

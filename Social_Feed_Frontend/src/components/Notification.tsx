@@ -6,7 +6,6 @@ const prof: string[] = menuOf.notification;
 import Svg from "./Svg";
 import Menu from "./Menu";
 function Notification(): JSX.Element {
-  //   const [count, setCount] = useState(0);
   const [notify, setNotify] = useState<string>("all");
 
   return (
