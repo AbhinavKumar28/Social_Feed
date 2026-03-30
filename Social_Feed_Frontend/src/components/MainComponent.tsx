@@ -1,19 +1,16 @@
-// import { useState } from "react";
-import type { JSX } from "react";
+import { type JSX } from "react";
 import "../App.css";
-import Left from "./LeftBar";
 import Right from "./RightBar";
-import type { Rightmenu } from "../types/components";
-
-function MainComponent({ left, setLeft }: Rightmenu): JSX.Element {
+import { Outlet } from "react-router-dom";
+function MainComponent(): JSX.Element {
   return (
     <>
       <div className="top-container">
         <div>
-          <Left left={left} />
+          <Outlet />
         </div>
         <div className="right-width">
-          <Right left={left} setLeft={setLeft} />
+          <Right />
         </div>
       </div>
     </>

@@ -7,6 +7,9 @@
   /* padding: 2rem; */
   /* text-align: center; */
 }
+.nav-capitalize{
+  text-transform: 'capitalize';
+}
 .dropdown-button{
   background-color: rgb(243, 245, 248);
   color: #5638cc;
